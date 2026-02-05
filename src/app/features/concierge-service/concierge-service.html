@@ -1,0 +1,32 @@
+<section class="concierge">
+  <h1>Services conciergerie — Packs et prestations</h1>
+
+  <div class="packs">
+    @for (pack of packs; track pack.title) {
+    <mat-card>
+      <img mat-card-image [src]="pack.image" [alt]="pack.title" />
+      <mat-card-header>
+        <mat-card-title>{{ pack.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        @if (pack.description) {
+          <p class="pack-desc">{{ pack.description }}</p>
+        }
+
+        @if (pack.items?.length) {
+          <ul>
+            @for (item of pack.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        }
+
+        @if (pack.price) {
+          <p class="tarif"><strong>Tarif :</strong> {{ pack.price }}</p>
+        }
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+
+</section>

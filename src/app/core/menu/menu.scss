@@ -20,24 +20,22 @@
 }
 
 .logo-link {
-  display: inline-block;
-  padding: 8px 0;
-  line-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  text-decoration: none;
 
   &:focus {
     outline: none;
   }
 }
 
-.logo {
-  height: 28px;
+.logo-marron {
+  height: 36px;
   width: auto;
-  display: block;
-  transition: opacity 0.2s ease;
-
-  .logo-link:hover & {
-    opacity: 0.8;
-  }
+  margin-right: 8px;
+  display: inline-block;
 }
 
 .business-title {

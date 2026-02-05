@@ -1,18 +1,19 @@
-<!-- Header container -->
+<!-- Header container (moved from app.html) -->
 <header class="apple-header">
   <!-- Logo à gauche -->
   <div class="logo-container">
     <a href="#" class="logo-link">
+      <img src="assets/logo_marron.png" alt="Lodge and Clean" class="logo-marron">
       <span class="business-title">Lodge and Clean</span>
     </a>
   </div>
 
   <!-- Menu au centre -->
   <nav class="menu-nav">
-    <a class="menu-link" (click)="activeLink = { label: 'home', link: 'home' }" [class.active]="activeLink.link == 'home'">Accueil</a>
-    <a class="menu-link" (click)="activeLink = { label: 'about', link: 'about' }" [class.active]="activeLink.link == 'about'">À Propos</a>
-    <a class="menu-link" (click)="activeLink = { label: 'services', link: 'services' }" [class.active]="activeLink.link == 'services'">Services</a>
-    <a class="menu-link" (click)="activeLink = { label: 'contact', link: 'contact' }" [class.active]="activeLink.link == 'contact'">Contact</a>
+    <a class="menu-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+    <a class="menu-link" routerLink="/concierge-service" routerLinkActive="active">Services conciergerie</a>
+    <a class="menu-link">Locations</a>
+    <a class="menu-link" routerLink="/contact" routerLinkActive="active">Contact</a>
   </nav>
 
   <!-- Right section (search, cart, etc) -->

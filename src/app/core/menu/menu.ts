@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
-  imports: [MatTabsModule],
+  standalone: true,
+  imports: [MatTabsModule, RouterModule],
   templateUrl: './menu.html',
   styleUrl: './menu.scss'
 })
 export class Menu {
-  links = [
-    { label: 'Conciergerie Airbnb', link: '/conciergerie' },
-    { label: 'A propos', link: '/apropos' },
-    { label: 'Contact', link: '/contact' },
-  ];
-  activeLink = this.links[0];
-
+  // menu component now renders the full header
 }
