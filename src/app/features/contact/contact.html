@@ -1,0 +1,115 @@
+<div class="contact-container">
+  <div class="contact-header">
+    <h1>Contactez-nous</h1>
+    <p>Nous sommes là pour répondre à vos questions</p>
+  </div>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input
+          type="text"
+          id="nom"
+          formControlName="nom"
+          placeholder="Votre nom"
+          [class.is-invalid]="submitted && nom?.invalid"
+        />
+        @if (submitted && nom?.invalid) {
+          <span class="error-message">
+            Le nom est requis
+          </span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input
+          type="text"
+          id="prenom"
+          formControlName="prenom"
+          placeholder="Votre prénom"
+          [class.is-invalid]="submitted && prenom?.invalid"
+        />
+        @if (submitted && prenom?.invalid) {
+          <span class="error-message">
+            Le prénom est requis
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="votre@email.com"
+          [class.is-invalid]="submitted && email?.invalid"
+        />
+        @if (submitted && email?.invalid) {
+          <span class="error-message">
+            @if (email?.errors?.['required']) {
+              <span>L'email est requis</span>
+            }
+            @if (email?.errors?.['email']) {
+              <span>L'email est invalide</span>
+            }
+          </span>
+        }
+      </div>
+
+      <div class="form-group phone-group">
+        <label for="telephone">Téléphone</label>
+        <div class="phone-input-wrapper">
+          <mat-icon class="phone-icon">phone</mat-icon>
+          <input
+            type="tel"
+            id="telephone"
+            formControlName="telephone"
+            placeholder="+33 6 12 34 56 78"
+            [class.is-invalid]="submitted && telephone?.invalid"
+          />
+        </div>
+        @if (submitted && telephone?.invalid) {
+          <span class="error-message">
+            Le téléphone est requis et invalide
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        placeholder="Votre message (min 10 caractères)"
+        rows="6"
+        [class.is-invalid]="submitted && message?.invalid"
+      ></textarea>
+      @if (submitted && message?.invalid) {
+        <span class="error-message">
+          @if (message?.errors?.['required']) {
+            <span>Le message est requis</span>
+          }
+          @if (message?.errors?.['minlength']) {
+            <span>Le message doit contenir au moins 10 caractères</span>
+          }
+        </span>
+      }
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="submit-btn">Envoyer</button>
+    </div>
+
+    @if (submitSuccess) {
+      <div class="success-message">
+        ✓ Votre message a été envoyé avec succès!
+      </div>
+    }
+  </form>
+</div>
