@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, MatIconModule],
+  imports: [ReactiveFormsModule, MatIconModule, MatCardModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
 export class Contact {
+      goToLink(url: string) {
+        window.location.href = url;
+      }
+    openMailto() {
+      if (this.contactForm.valid) {
+        window.location.href = this.mailtoLink();
+      }
+    }
   contactForm: FormGroup;
   submitted = false;
   submitSuccess = false;
@@ -58,5 +67,15 @@ export class Contact {
 
   get message() {
     return this.contactForm.get('message');
+  }
+
+  mailtoLink() {
+    const nom = encodeURIComponent(this.contactForm.value.nom || '');
+    const prenom = encodeURIComponent(this.contactForm.value.prenom || '');
+    const email = encodeURIComponent(this.contactForm.value.email || '');
+    const telephone = encodeURIComponent(this.contactForm.value.telephone || '');
+    const message = encodeURIComponent(this.contactForm.value.message || '');
+    const body = `Nom: ${nom}%0APrénom: ${prenom}%0AEmail: ${email}%0ATéléphone: ${telephone}%0AMessage: ${message}`;
+    return `mailto:lodgeandclean@outlook.com?subject=Contact%20depuis%20le%20site&body=${body}`;
   }
 }

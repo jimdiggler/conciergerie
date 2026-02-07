@@ -1,3 +1,42 @@
+.contact-icon {
+  font-size: 40px !important;
+  color: #c9a876;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-card.clickable {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.contact-card.clickable:hover {
+  box-shadow: 0 4px 24px 0 rgba(41, 41, 41, 0.12);
+}
+// Affichage horizontal des cards de contact
+.contact-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.contact-card {
+  min-width: 220px;
+  max-width: 280px;
+  flex: 1 1 220px;
+  text-align: center;
+}
 .contact-container {
   max-width: 600px;
   margin: 80px auto;
