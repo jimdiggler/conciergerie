@@ -1,0 +1,19 @@
+<div class="rental-container">
+  <div class="rental-header">
+    <h1>Exemple de logements accompagnés</h1>
+    <p>
+      Nous intervenons sur des logements confiés par leurs propriétaires afin d’assurer un accueil
+      soigné, un séjour confortable et un suivi professionnel.
+    </p>
+  </div>
+  <div class="gallery-grid">
+    @for (picture of pictures; track picture.id) {
+      <div class="gallery-item">
+        <img [src]="picture.src" [alt]="picture.alt" class="gallery-image" />
+        @if (picture.caption) {
+          <p class="gallery-caption">{{ picture.caption }}</p>
+        }
+      </div>
+    }
+  </div>
+</div>

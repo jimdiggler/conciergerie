@@ -12,6 +12,7 @@
 .packs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 1.5rem;
   margin-top: 1.5rem;
 
@@ -50,13 +51,20 @@ mat-card {
   border-radius: 18px;
   box-shadow: 0 2px 8px 0 rgba(139, 119, 101, 0.08);
   border: 1.5px solid #e3e8f0;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
   margin-bottom: 0.5rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 mat-card:hover {
-  box-shadow: 0 6px 24px 0 rgba(201, 168, 118, 0.18), 0 2px 8px 0 rgba(90, 74, 58, 0.10);
+  box-shadow:
+    0 6px 24px 0 rgba(201, 168, 118, 0.18),
+    0 2px 8px 0 rgba(90, 74, 58, 0.1);
   transform: translateY(-2px) scale(1.015);
   border-color: #c9a876;
 }
