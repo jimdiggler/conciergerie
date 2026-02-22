@@ -1,0 +1,25 @@
+<div class="contact-container">
+  <div class="contact-header">
+    <h1>Contactez Lodge and Clean</h1>
+    <p>Nous sommes là pour répondre à vos questions</p>
+  </div>
+
+  <div class="contact-cards">
+    <mat-card class="contact-card clickable" (click)="goToLink('tel:+33612345678')">
+      <mat-card-content
+        style="display: flex; flex-direction: column; align-items: center; gap: 8px"
+      >
+        <mat-icon class="contact-icon">phone</mat-icon>
+        <span>06 12 34 56 78</span>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="contact-card clickable" (click)="goToLink('mailto:jccouvez@me.com')">
+      <mat-card-content
+        style="display: flex; flex-direction: column; align-items: center; gap: 8px"
+      >
+        <mat-icon class="contact-icon">mail</mat-icon>
+        <span>lodgeandclean@outlook.com</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
