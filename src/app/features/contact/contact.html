@@ -1,18 +1,18 @@
-<div class="mx-auto mt-20 max-w-[600px] px-6 py-10 font-sans text-[#2b241f]">
-  <div class="mb-12 text-center">
-    <h1 class="mb-3 text-[32px] font-bold tracking-[-0.5px] text-[#2b241f]">
+<div
+  class="mx-auto mt-12 md:mt-20 max-w-[600px] px-4 md:px-6 py-6 md:py-10 font-sans text-[#2b241f]"
+>
+  <div class="mb-8 md:mb-12 text-center">
+    <h1 class="mb-2 md:mb-3 text-[26px] md:text-[32px] font-bold tracking-[-0.5px] text-[#2b241f]">
       Contactez Lodge and Clean
     </h1>
-    <p class="text-sm leading-relaxed text-[#7a6a5a]">
+    <p class="text-[13px] md:text-sm leading-relaxed text-[#7a6a5a]">
       Nous sommes là pour répondre à vos questions
     </p>
   </div>
 
-  <div
-    class="mb-8 mt-8 flex flex-row justify-center gap-6 max-[700px]:flex-col max-[700px]:items-center max-[700px]:gap-4"
-  >
+  <div class="mb-6 md:mb-8 mt-6 md:mt-8 flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
     <mat-card
-      class="min-w-[220px] max-w-[280px] flex-1 cursor-pointer text-center transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(41,41,41,0.12)]"
+      class="w-full sm:min-w-[220px] sm:max-w-[280px] sm:flex-1 cursor-pointer text-center transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(41,41,41,0.12)]"
       (click)="goToLink('tel:+33664322169')"
     >
       <mat-card-content class="flex flex-col items-center justify-center gap-2">
@@ -22,11 +22,11 @@
     </mat-card>
 
     <mat-card
-      class="min-w-[220px] max-w-[280px] flex-1 cursor-pointer text-center transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(41,41,41,0.12)]"
+      class="w-full sm:min-w-[220px] sm:max-w-[280px] sm:flex-1 cursor-pointer text-center transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(41,41,41,0.12)]"
       (click)="goToLink('mailto:jccouvez@me.com')"
     >
       <mat-card-content class="flex flex-col items-center justify-center gap-2">
-        <mat-icon class="!h-12 !w-12 !text-[40px] !text-[#c9a876]">mail</mat-icon>
+        <mat-icon class="!mx-auto !block !h-12 !w-12 !text-[40px] !text-[#c9a876]">mail</mat-icon>
         <span class="text-sm text-[#2b241f]">lodgeandclean@outlook.com</span>
       </mat-card-content>
     </mat-card>
