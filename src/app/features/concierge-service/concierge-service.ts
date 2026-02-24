@@ -5,7 +5,6 @@ import { MatCardModule } from '@angular/material/card';
   selector: 'app-concierge-service',
   imports: [MatCardModule],
   templateUrl: './concierge-service.html',
-  styleUrl: './concierge-service.scss',
 })
 export class ConciergeService {
   // -----------------------------------------------------------------

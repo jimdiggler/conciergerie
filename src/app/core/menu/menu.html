@@ -1,32 +1,54 @@
-<!-- Header container (moved from app.html) -->
-<header class="apple-header">
-  <!-- Logo à gauche -->
-  <div class="logo-container">
-    <a href="#" class="logo-link">
-      <img src="assets/logo_marron.png" alt="Lodge and Clean" class="logo-marron" />
-      <span class="business-title">Lodge and Clean</span>
+<header
+  class="sticky top-0 z-[1000] flex h-11 w-full items-center justify-between bg-[rgba(245,240,232,0.9)] px-[22px] backdrop-blur-[20px] border-b border-[rgba(139,119,101,0.15)] font-sans"
+>
+  <div class="flex flex-none items-center mr-5">
+    <a href="#" class="flex items-center gap-2 no-underline focus:outline-none">
+      <img
+        src="assets/logo_marron.png"
+        alt="Lodge and Clean"
+        class="h-9 w-auto mr-2 inline-block"
+      />
+      <span
+        class="inline-block align-middle text-[16px] font-semibold tracking-[-0.5px] text-[#5a4a3a] transition-opacity duration-200 hover:opacity-80"
+      >
+        Lodge and Clean
+      </span>
     </a>
   </div>
 
-  <!-- Menu au centre -->
-  <nav class="menu-nav">
+  <nav class="flex flex-1 items-center justify-center gap-2">
     <a
-      class="menu-link"
+      class="px-[18px] py-3 text-[12px] font-normal text-[#5a4a3a] whitespace-nowrap tracking-[-0.12px] text-center relative cursor-pointer transition-colors duration-200 hover:text-[#8b7765] [&.active]:text-[#c9a876] [&.active]:font-medium [&.active]:after:content-[''] [&.active]:after:absolute [&.active]:after:left-4 [&.active]:after:right-4 [&.active]:after:bottom-0 [&.active]:after:h-0.5 [&.active]:after:bg-[#c9a876]"
       routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
       >Accueil</a
     >
-    <a class="menu-link" routerLink="/concierge-service" routerLinkActive="active"
+    <a
+      class="px-[18px] py-3 text-[12px] font-normal text-[#5a4a3a] whitespace-nowrap tracking-[-0.12px] text-center relative cursor-pointer transition-colors duration-200 hover:text-[#8b7765] [&.active]:text-[#c9a876] [&.active]:font-medium [&.active]:after:content-[''] [&.active]:after:absolute [&.active]:after:left-4 [&.active]:after:right-4 [&.active]:after:bottom-0 [&.active]:after:h-0.5 [&.active]:after:bg-[#c9a876]"
+      routerLink="/concierge-service"
+      routerLinkActive="active"
       >Services conciergerie</a
     >
-    <a class="menu-link" routerLink="/locations" routerLinkActive="active">Logements</a>
-    <a class="menu-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a
+      class="px-[18px] py-3 text-[12px] font-normal text-[#5a4a3a] whitespace-nowrap tracking-[-0.12px] text-center relative cursor-pointer transition-colors duration-200 hover:text-[#8b7765] [&.active]:text-[#c9a876] [&.active]:font-medium [&.active]:after:content-[''] [&.active]:after:absolute [&.active]:after:left-4 [&.active]:after:right-4 [&.active]:after:bottom-0 [&.active]:after:h-0.5 [&.active]:after:bg-[#c9a876]"
+      routerLink="/locations"
+      routerLinkActive="active"
+      >Logements</a
+    >
+    <a
+      class="px-[18px] py-3 text-[12px] font-normal text-[#5a4a3a] whitespace-nowrap tracking-[-0.12px] text-center relative cursor-pointer transition-colors duration-200 hover:text-[#8b7765] [&.active]:text-[#c9a876] [&.active]:font-medium [&.active]:after:content-[''] [&.active]:after:absolute [&.active]:after:left-4 [&.active]:after:right-4 [&.active]:after:bottom-0 [&.active]:after:h-0.5 [&.active]:after:bg-[#c9a876]"
+      routerLink="/contact"
+      routerLinkActive="active"
+      >Contact</a
+    >
   </nav>
 
-  <!-- Right section (search, cart, etc) -->
-  <div class="header-right">
-    <button class="search-btn" aria-label="Rechercher">
+  <div class="flex flex-none items-center gap-3 ml-5">
+    <button
+      class="flex items-center justify-center bg-transparent border-0 px-2 py-1 cursor-pointer text-[#5a4a3a] transition-opacity duration-200 leading-none hover:opacity-70"
+      aria-label="Rechercher"
+    >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
         <path
           d="M6.5 1C3.46 1 1 3.46 1 6.5s2.46 5.5 5.5 5.5c1.25 0 2.41-.45 3.31-1.2l4.07 4.07a.75.75 0 1 0 1.06-1.06l-4.07-4.07c.75-.9 1.2-2.06 1.2-3.31C12 3.46 9.54 1 6.5 1m0 1.5C8.97 2.5 10.5 4.03 10.5 6.5S8.97 10.5 6.5 10.5 2.5 8.97 2.5 6.5 4.03 2.5 6.5 2.5"

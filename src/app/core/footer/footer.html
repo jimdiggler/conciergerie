@@ -1,18 +1,38 @@
-<footer class="app-footer">
-  <div class="footer-container">
-    <div class="footer-content">
-      <h3>Lodge and Clean</h3>
-      <p>Une conciergerie pensée pour vos hôtes</p>
+<footer
+  class="bg-[#2b241f] text-[#faf7f2] px-10 pt-15 pb-10 border-t border-[rgba(201,168,118,0.2)] font-sans"
+>
+  <div class="mx-auto max-w-[1200px]">
+    <div class="mb-10 text-center">
+      <h3 class="mb-2 text-[24px] font-semibold tracking-[-0.5px] text-[#c9a876]">
+        Lodge and Clean
+      </h3>
+      <p class="text-[14px] text-[rgba(250,247,242,0.8)] leading-snug">
+        Une conciergerie pensée pour vos hôtes
+      </p>
     </div>
 
-    <nav class="footer-nav">
-      <a href="#en-bref" class="footer-link">En bref</a>
-      <a routerLink="/contact" class="footer-link">Contact</a>
-      <a routerLink="/mentions-legales" class="footer-link">Mentions légales</a>
+    <nav class="mb-10 flex flex-wrap justify-center gap-[30px] text-[14px]">
+      <a
+        href="#en-bref"
+        class="text-[rgba(250,247,242,0.85)] no-underline transition-colors duration-200 hover:text-[#c9a876]"
+        >En bref</a
+      >
+      <a
+        routerLink="/contact"
+        class="text-[rgba(250,247,242,0.85)] no-underline transition-colors duration-200 hover:text-[#c9a876]"
+        >Contact</a
+      >
+      <a
+        routerLink="/mentions-legales"
+        class="text-[rgba(250,247,242,0.85)] no-underline transition-colors duration-200 hover:text-[#c9a876]"
+        >Mentions légales</a
+      >
     </nav>
 
-    <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Lodge and Clean. Tous droits réservés.</p>
+    <div class="border-t border-[rgba(201,168,118,0.1)] pt-7 text-center">
+      <p class="text-[12px] text-[rgba(250,247,242,0.6)]">
+        &copy; {{ currentYear }} Lodge and Clean. Tous droits réservés.
+      </p>
     </div>
   </div>
 </footer>

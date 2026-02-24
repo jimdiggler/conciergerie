@@ -1,17 +1,28 @@
-<div class="rental-container">
-  <div class="rental-header">
-    <h1>Exemple de logements accompagnés</h1>
-    <p>
+<div class="mx-auto mt-20 max-w-5xl px-6 py-10 font-sans text-[#2b241f]">
+  <div class="mb-16 text-center">
+    <h1 class="mb-4 text-4xl font-bold tracking-tight text-[#2b241f]">
+      Exemple de logements accompagnés
+    </h1>
+    <p class="mx-auto max-w-2xl text-base leading-relaxed text-[#7a6a5a]">
       Nous intervenons sur des logements confiés par leurs propriétaires afin d’assurer un accueil
       soigné, un séjour confortable et un suivi professionnel.
     </p>
   </div>
-  <div class="gallery-grid">
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-10">
     @for (picture of pictures; track picture.id) {
-      <div class="gallery-item">
-        <img [src]="picture.src" [alt]="picture.alt" class="gallery-image" />
+      <div
+        class="relative overflow-hidden rounded-xl bg-[#f5f1e8] shadow-md transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-xl"
+      >
+        <img
+          [src]="picture.src"
+          [alt]="picture.alt"
+          class="block h-72 w-full bg-gradient-to-br from-[#f5f1e8] to-[#e8dcc7] object-cover sm:h-60"
+        />
         @if (picture.caption) {
-          <p class="gallery-caption">{{ picture.caption }}</p>
+          <p class="m-0 bg-white px-4 py-3 text-center text-sm font-medium text-[#5a4a3a]">
+            {{ picture.caption }}
+          </p>
         }
       </div>
     }

@@ -12,7 +12,6 @@ interface Picture {
   standalone: true,
   imports: [],
   templateUrl: './rental.html',
-  styleUrl: './rental.scss',
 })
 export class Rental {
   // -----------------------------------------------------------------

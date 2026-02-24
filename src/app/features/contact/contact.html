@@ -1,24 +1,33 @@
-<div class="contact-container">
-  <div class="contact-header">
-    <h1>Contactez Lodge and Clean</h1>
-    <p>Nous sommes là pour répondre à vos questions</p>
+<div class="mx-auto mt-20 max-w-[600px] px-6 py-10 font-sans text-[#2b241f]">
+  <div class="mb-12 text-center">
+    <h1 class="mb-3 text-[32px] font-bold tracking-[-0.5px] text-[#2b241f]">
+      Contactez Lodge and Clean
+    </h1>
+    <p class="text-sm leading-relaxed text-[#7a6a5a]">
+      Nous sommes là pour répondre à vos questions
+    </p>
   </div>
 
-  <div class="contact-cards">
-    <mat-card class="contact-card clickable" (click)="goToLink('tel:+33612345678')">
-      <mat-card-content
-        style="display: flex; flex-direction: column; align-items: center; gap: 8px"
-      >
-        <mat-icon class="contact-icon">phone</mat-icon>
-        <span>06 12 34 56 78</span>
+  <div
+    class="mb-8 mt-8 flex flex-row justify-center gap-6 max-[700px]:flex-col max-[700px]:items-center max-[700px]:gap-4"
+  >
+    <mat-card
+      class="min-w-[220px] max-w-[280px] flex-1 cursor-pointer text-center transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(41,41,41,0.12)]"
+      (click)="goToLink('tel:+33664322169')"
+    >
+      <mat-card-content class="flex flex-col items-center justify-center gap-2">
+        <mat-icon class="!mx-auto !block !h-12 !w-12 !text-[40px] !text-[#c9a876]">phone</mat-icon>
+        <span class="text-sm text-[#2b241f]">+33 6 64 32 21 69</span>
       </mat-card-content>
     </mat-card>
-    <mat-card class="contact-card clickable" (click)="goToLink('mailto:jccouvez@me.com')">
-      <mat-card-content
-        style="display: flex; flex-direction: column; align-items: center; gap: 8px"
-      >
-        <mat-icon class="contact-icon">mail</mat-icon>
-        <span>lodgeandclean@outlook.com</span>
+
+    <mat-card
+      class="min-w-[220px] max-w-[280px] flex-1 cursor-pointer text-center transition-shadow duration-200 hover:shadow-[0_4px_24px_rgba(41,41,41,0.12)]"
+      (click)="goToLink('mailto:jccouvez@me.com')"
+    >
+      <mat-card-content class="flex flex-col items-center justify-center gap-2">
+        <mat-icon class="!h-12 !w-12 !text-[40px] !text-[#c9a876]">mail</mat-icon>
+        <span class="text-sm text-[#2b241f]">lodgeandclean@outlook.com</span>
       </mat-card-content>
     </mat-card>
   </div>
