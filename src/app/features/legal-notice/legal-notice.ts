@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-legal-notice',
   imports: [],
   templateUrl: './legal-notice.html',
-  styleUrl: './legal-notice.scss',
 })
 export class LegalNotice {}

@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [ReactiveFormsModule, MatIconModule, MatCardModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss',
 })
 export class Contact {
   // -----------------------------------------------------------------
